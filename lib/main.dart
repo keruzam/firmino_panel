@@ -31,8 +31,35 @@ class HomePage extends StatelessWidget {
         children: [
           //ProgresBar(),
           TaskList(),
+          SizedBox(height: 30,),
+          MyButton(buttonIcon: Icons.refresh, label: "Check status"),
         ]
       ),
+    );
+  }
+}
+
+class MyButton extends StatelessWidget {
+  const MyButton({required this.buttonIcon, required this.label});
+
+  final IconData buttonIcon;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton.icon(
+        onPressed: (){ print("test");},
+        label: Text(label),
+        icon: Icon(buttonIcon),
+        style: ElevatedButton.styleFrom(
+          elevation: 0.5,
+          backgroundColor: Colors.blueGrey.shade900,
+          foregroundColor: Colors.blueGrey.shade200,
+          minimumSize: Size(220,60),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(5),
+          ),
+        ),
     );
   }
 }
