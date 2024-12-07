@@ -1,5 +1,6 @@
 import 'package:firmino_panel/widgets/my_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 //import 'package:flutter/services.dart';
 
 void main() {
@@ -33,11 +34,12 @@ class HomePage extends StatelessWidget {
               color: Colors.blueGrey.shade300
           ),
         ),
-        backgroundColor: Colors.blueGrey.shade800,
+        backgroundColor: Colors.blueGrey.shade900,
       ),
       body: Column(
         children: [
           //ProgresBar(),
+          SizedBox(height: 10,),
           TaskList(),
           SizedBox(height: 30,),
           MyButton(buttonIcon: Icons.refresh, label: "Check status"),
