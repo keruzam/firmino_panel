@@ -40,8 +40,23 @@ class MyRow extends StatelessWidget {
             //color: Colors.grey.shade600,
               child: Row(
                 children: [
-                  Container(padding: EdgeInsets.all(10.0), width: 40, child: Icon(icon, size: 32, color: iconColor)),
-                  Container(margin: const EdgeInsets.only(left: 15.0), width: 300, child: Text(label, style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.bold, color: Colors.blueGrey.shade100))),
+                  Container(
+                      padding: EdgeInsets.all(10.0),
+                      width: 40,
+                      child: Icon(icon, size: 32, color: iconColor)
+                  ),
+                  Container(
+                      margin: const EdgeInsets.only(left: 15.0),
+                      width: 200,
+                      child: Text(
+                          label,
+                          style: TextStyle(
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blueGrey.shade100
+                          )
+                      )
+                  ),
                 ],
               )
           )

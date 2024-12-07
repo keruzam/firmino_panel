@@ -25,7 +25,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blueGrey.shade700,
       appBar: AppBar(
-        title: Text("Firmino panel", style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.blueGrey.shade300),),
+        title: Text(
+          "Firmino panel",
+          style: TextStyle(
+              fontSize: 18.0,
+              fontWeight: FontWeight.bold,
+              color: Colors.blueGrey.shade300
+          ),
+        ),
         backgroundColor: Colors.blueGrey.shade800,
       ),
       body: Column(
