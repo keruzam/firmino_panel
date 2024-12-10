@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
-  const MyButton({required this.buttonIcon, required this.label});
+  const MyButton({required this.buttonIcon, required this.label, required this.actionInButton});
 
   final IconData buttonIcon;
   final String label;
+  final Function() actionInButton;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
-      onPressed: (){ print("test");},
+      onPressed: actionInButton,
       label: Text(label),
       icon: Icon(buttonIcon),
       style: ElevatedButton.styleFrom(
@@ -23,6 +24,7 @@ class MyButton extends StatelessWidget {
       ),
     );
   }
+
 }
 
 class MyRow extends StatelessWidget {
@@ -61,6 +63,19 @@ class MyRow extends StatelessWidget {
               )
           )
         ]
+    );
+  }
+}
+
+class ProgresBar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text("Progress ..."),
+        LinearProgressIndicator(value: 0.2, color: Colors.blue,),
+        Container(margin: EdgeInsets.only(top: 25.0),),
+      ],
     );
   }
 }
