@@ -1,3 +1,4 @@
+import 'package:firmino_panel/screens/rest_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firmino_panel/screens/home.dart';
 import 'package:http/http.dart' as http;
