@@ -9,10 +9,18 @@ class RestPage extends StatefulWidget {
 
 class _RestPageState extends State<RestPage> {
   int _counter = 0;
+  DateTime _checkDate = DateTime.now();
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+      _checkDate = DateTime.now();
+    });
+  }
+
+  void _checkStatus() {
+    setState(() {
+      _checkDate = DateTime.now();
     });
   }
 
@@ -28,6 +36,8 @@ class _RestPageState extends State<RestPage> {
         children: [
           Text('$_counter'),
           MyButton(label: "Test", buttonIcon: Icons.plus_one, actionInButton: () => _incrementCounter(),),
+          SizedBox(height: 20,),
+          Text('$_checkDate'),
         ]
       )),
     );
